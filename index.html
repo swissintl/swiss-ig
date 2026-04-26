@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="瑞士國際抗衰老集團 - 20年細胞抗衰老科研領導品牌，擁有Cell Control雙核專利技術，提供高端抗衰老產品與商業合作。">
+    <meta name="keywords" content="抗衰老,細胞修復,多肽,瑞士,香港,Swiss International,IAAG">
+    <title>瑞士國際抗衰老集團 | Swiss International Anti-Aging Group</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===================== CSS VARIABLES ===================== */
+        :root {
+            --gold: #C9A96E;
+            --gold-dark: #9E7D48;
+            --gold-light: #E8D5B0;
+            --ivory: #F8F5F0;
+            --ivory-dark: #EDE8E0;
+            --charcoal: #2C2C2C;
+            --charcoal-light: #3A3A3A;
+            --gray: #666;
+            --gray-light: #999;
+            --white: #FFFFFF;
+            --font-display: 'Cormorant Garamond', 'Noto Serif TC', serif;
+            --font-body: 'Noto Sans TC', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow-sm: 0 2px 15px rgba(0,0,0,0.06);
+            --shadow-md: 0 8px 40px rgba(0,0,0,0.10);
+            --shadow-lg: 0 20px 60px rgba(0,0,0,0.14);
+        }
+
+        /* ===================== RESET ===================== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); color: var(--charcoal); background: var(--ivory); overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* ===================== TYPOGRAPHY ===================== */
+        h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing: 1px; }
+        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; }
+        h2 { font-size: clamp(1.8rem, 3.5vw, 3rem); line-height: 1.2; }
+        h3 { font-size: clamp(1.2rem, 2.5vw, 1.8rem); }
+        p { font-size: 1.05rem; color: var(--gray); line-height: 1.85; }
+
+        /* ===================== UTILITIES ===================== */
+        .container { max-width: 1320px; margin: 0 auto; padding: 0 2.5rem; }
+        .section { padding: 7rem 0; }
+        .section--alt { background: var(--white); }
+        .text-gold { color: var(--gold); }
+        .text-center { text-align: center; }
+
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .section-title {
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+            margin: 1.5rem auto 0;
+        }
+        .section-title.left::after { margin-left: 0; }
+        .section-desc {
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            color: var(--gray);
+            line-height: 1.9;
+            font-size: 1.05rem;
+        }
+
+        /* ===================== BUTTON ===================== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1rem 2.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: var(--font-body);
+        }
+        .btn-gold {
+            background: var(--gold);
+            color: var(--white);
+        }
+        .btn-gold:hover {
+            background: var(--gold-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201,169,110,0.35);
+        }
+        .btn-outline-gold {
+            background: transparent;
+            color: var(--gold);
+            border: 1.5px solid var(--gold);
+        }
+        .btn-outline-gold:hover {
+            background: var(--gold);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 1.5px solid rgba(255,255,255,0.7);
+        }
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--charcoal);
+        }
+
+        /* ===================== HEADER / NAV ===================== */
+        .header {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        .header.transparent .nav-inner {
+            background: transparent;
+            box-shadow: none;
+        }
+        .header.solid .nav-inner {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.4rem 2.5rem;
+            transition: var(--transition);
+        }
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--charcoal);
+            transition: var(--transition);
+        }
+        .header.transparent .logo { color: var(--white); }
+        .logo span { color: var(--gold); }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        .nav-links a {
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            font-weight: 500;
+            color: var(--charcoal);
+            position: relative;
+            padding: 0.3rem 0;
+        }
+        .header.transparent .nav-links a { color: rgba(255,255,255,0.9); }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 1.5px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .nav-links a:hover { color: var(--gold); }
+        .header.transparent .nav-links a:hover { color: var(--gold-light); }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .menu-toggle span {
+            width: 26px; height: 2px;
+            background: var(--charcoal);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+        .header.transparent .menu-toggle span { background: var(--white); }
+
+        /* ===================== HERO ===================== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('images/product-set.jpg') center/cover no-repeat;
+            transform: scale(1.05);
+            transition: transform 8s ease;
+        }
+        .hero.loaded .hero-bg { transform: scale(1); }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(28,24,20,0.78) 0%,
+                rgba(44,32,10,0.55) 50%,
+                rgba(201,169,110,0.18) 100%
+            );
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2.5rem;
+            width: 100%;
+        }
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(201,169,110,0.25);
+            border: 1px solid rgba(201,169,110,0.6);
+            color: var(--gold-light);
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(4px);
+        }
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            max-width: 680px;
+            font-style: italic;
+        }
+        .hero h1 em {
+            color: var(--gold-light);
+            font-style: italic;
+        }
+        .hero-sub {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.15rem;
+            max-width: 520px;
+            margin-bottom: 3rem;
+            line-height: 1.9;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .hero-scroll {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+        .hero-scroll::after {
+            content: '';
+            width: 1px;
+            height: 50px;
+            background: rgba(255,255,255,0.4);
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-8px); }
+        }
+
+        /* ===================== SPLIT ACCESS ===================== */
+        .split-access {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .split-panel {
+            position: relative;
+            padding: 6rem 4rem;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .split-panel::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            transition: var(--transition);
+        }
+        .split-panel.b2c::before {
+            background: linear-gradient(135deg, var(--ivory) 0%, var(--ivory-dark) 100%);
+        }
+        .split-panel.b2b::before {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #1a1612 100%);
+        }
+        .split-panel:hover::before { opacity: 0.9; }
+        .split-panel-content { position: relative; z-index: 1; max-width: 460px; }
+        .split-panel .panel-label {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .split-panel.b2c .panel-label { color: var(--gold); }
+        .split-panel.b2b .panel-label { color: var(--gold-light); }
+        .split-panel h3 {
+            margin-bottom: 1.5rem;
+        }
+        .split-panel.b2c h3 { color: var(--charcoal); }
+        .split-panel.b2b h3 { color: var(--white); }
+        .split-panel p { margin-bottom: 2rem; }
+        .split-panel.b2c p { color: var(--gray); }
+        .split-panel.b2b p { color: rgba(255,255,255,0.7); }
+        .split-panel-benefits {
+            list-style: none;
+            margin-bottom: 2.5rem;
+        }
+        .split-panel-benefits li {
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .split-panel.b2c .split-panel-benefits li { color: var(--gray); }
+        .split-panel.b2b .split-panel-benefits li { color: rgba(255,255,255,0.75); }
+        .split-panel-benefits li::before {
+            content: '';
+            width: 5px; height: 5px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+        .split-divider {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 60px; height: 60px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            font-size: 1.2rem;
+            color: var(--white);
+            font-family: var(--font-display);
+            font-style: italic;
+            box-shadow: 0 4px 20px rgba(201,169,110,0.4);
+        }
+
+        /* ===================== STATS ===================== */
+        .stats-bar {
+            background: var(--charcoal);
+            padding: 3.5rem 0;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            text-align: center;
+        }
+        .stat-item {
+            padding: 1.5rem 2rem;
+            border-right: 1px solid rgba(255,255,255,0.08);
+        }
+        .stat-item:last-child { border-right: none; }
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--gold);
+            font-weight: 300;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .stat-label {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.55);
+        }
+
+        /* ===================== PRODUCTS PREVIEW ===================== */
+        .products-preview { background: var(--ivory); }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .product-card {
+            background: var(--white);
+            border-radius: 2px;
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        .product-card-image {
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            background: var(--ivory-dark);
+        }
+        .product-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .product-card:hover .product-card-image img { transform: scale(1.08); }
+        .product-card-body {
+            padding: 2rem;
+        }
+        .product-card-body h4 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--charcoal);
+            margin-bottom: 0.7rem;
+            font-weight: 400;
+        }
+        .product-card-body p {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        .product-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .product-tag {
+            padding: 0.3rem 0.8rem;
+            background: var(--ivory);
+            color: var(--gray);
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            border-radius: 20px;
+        }
+        .product-link {
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .product-link:hover { gap: 0.9rem; color: var(--gold-dark); }
+        .product-link::after { content: '→'; }
+
+        /* ===================== TECH SECTION ===================== */
+        .tech-section { background: var(--white); }
+        .tech-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+        .tech-image {
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+        .tech-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .tech-image-badge {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--gold);
+            color: var(--white);
+            padding: 1rem 1.5rem;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .tech-items {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .tech-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+        .tech-item-icon {
+            width: 50px; height: 50px;
+            min-width: 50px;
+            background: var(--ivory);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+        }
+        .tech-item-content h4 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+        .tech-item-content p {
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+
+        /* ===================== FOUNDER SPOTLIGHT ===================== */
+        .founder-section {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #1a1612 100%);
+            padding: 7rem 0;
+        }
+        .founder-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 6rem;
+            align-items: center;
+        }
+        .founder-image-wrap {
+            position: relative;
+        }
+        .founder-image {
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .founder-image-frame {
+            position: absolute;
+            top: -1.5rem; left: -1.5rem;
+            right: 1.5rem; bottom: 1.5rem;
+            border: 1px solid rgba(201,169,110,0.3);
+            border-radius: 2px;
+            pointer-events: none;
+        }
+        .founder-content .section-label { color: var(--gold); }
+        .founder-content h2 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        .founder-content .founder-title {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        .founder-content p { color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .founder-honors {
+            list-style: none;
+            margin: 2rem 0;
+        }
+        .founder-honors li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 0.7rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+        .founder-honors li:last-child { border-bottom: none; }
+        .founder-honors li .year {
+            color: var(--gold);
+            font-family: var(--font-display);
+            font-size: 1rem;
+            min-width: 50px;
+            font-weight: 300;
+        }
+
+        /* ===================== AWARDS ===================== */
+        .awards-section { background: var(--ivory); }
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+        .award-card {
+            background: var(--white);
+            padding: 3rem 2.5rem;
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+        .award-card:hover {
+            border-bottom-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        .award-icon { font-size: 3rem; margin-bottom: 1.5rem; }
+        .award-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--charcoal);
+            margin-bottom: 0.8rem;
+            font-weight: 400;
+        }
+        .award-card p { font-size: 0.9rem; }
+
+        /* ===================== CERTIFICATIONS ===================== */
+        .cert-bar {
+            background: var(--charcoal);
+            padding: 4rem 0;
+        }
+        .cert-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        .cert-item {
+            text-align: center;
+            padding: 1.5rem 2.5rem;
+            border: 1px solid rgba(201,169,110,0.2);
+            min-width: 130px;
+            transition: var(--transition);
+        }
+        .cert-item:hover { border-color: var(--gold); }
+        .cert-flag { font-size: 2rem; margin-bottom: 0.5rem; }
+        .cert-label {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* ===================== MEDIA ===================== */
+        .media-section { background: var(--white); }
+        .media-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .media-logo {
+            padding: 1.2rem 2.5rem;
+            background: var(--ivory);
+            color: var(--gray);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+        .media-logo:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: var(--white);
+        }
+
+        /* ===================== CTA ===================== */
+        .cta-section {
+            background: url('images/product-poster.jpg') center/cover no-repeat;
+            position: relative;
+            padding: 8rem 0;
+            text-align: center;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(28,24,20,0.75);
+        }
+        .cta-section .container { position: relative; z-index: 1; }
+        .cta-section h2 { color: var(--white); margin-bottom: 1.5rem; }
+        .cta-section p { color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 3rem; font-size: 1.1rem; }
+        .cta-buttons { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
+
+        /* ===================== FOOTER ===================== */
+        .footer {
+            background: #1a1612;
+            padding: 5rem 0 2rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+        .footer-logo span { color: var(--gold); }
+        .footer-about p {
+            color: rgba(255,255,255,0.55);
+            font-size: 0.9rem;
+            line-height: 1.9;
+            margin-bottom: 2rem;
+        }
+        .footer h5 {
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.7rem; }
+        .footer-links a {
+            color: rgba(255,255,255,0.55);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .footer-links a:hover { color: var(--gold); padding-left: 5px; }
+        .footer-contact p {
+            color: rgba(255,255,255,0.55);
+            font-size: 0.9rem;
+            margin-bottom: 0.7rem;
+            line-height: 1.7;
+        }
+        .footer-contact a { color: var(--gold); }
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            text-align: center;
+        }
+        .footer-bottom p {
+            color: rgba(255,255,255,0.3);
+            font-size: 0.8rem;
+        }
+
+        /* ===================== WHATSAPP ===================== */
+        .wa-float {
+            position: fixed;
+            bottom: 2rem; right: 2rem;
+            width: 58px; height: 58px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+            z-index: 999;
+            transition: var(--transition);
+        }
+        .wa-float:hover { transform: scale(1.12); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
+        .wa-float svg { width: 30px; height: 30px; fill: white; }
+
+        /* ===================== LOADER ===================== */
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: var(--ivory);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease;
+        }
+        .loader.fade { opacity: 0; pointer-events: none; }
+        .loader-logo {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--charcoal);
+            letter-spacing: 4px;
+            margin-bottom: 2rem;
+        }
+        .loader-logo span { color: var(--gold); }
+        .loader-bar {
+            width: 120px; height: 2px;
+            background: rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .loader-bar::after {
+            content: '';
+            position: absolute;
+            left: -100%;
+            top: 0;
+            width: 100%; height: 100%;
+            background: var(--gold);
+            animation: load 1.2s ease forwards;
+        }
+        @keyframes load { to { left: 0; } }
+
+        /* ===================== ANIMATIONS ===================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===================== RESPONSIVE ===================== */
+        @media (max-width: 1024px) {
+            .tech-layout, .founder-layout { grid-template-columns: 1fr; gap: 3rem; }
+            .tech-image { max-height: 400px; }
+            .founder-image { max-height: 400px; }
+            .awards-grid { grid-template-columns: 1fr 1fr; }
+            .products-grid { grid-template-columns: 1fr 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+        }
+        @media (max-width: 768px) {
+            .container { padding: 0 1.5rem; }
+            .section { padding: 5rem 0; }
+            .nav-inner { padding: 1.2rem 1.5rem; }
+            .nav-links { display: none; flex-direction: column; position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; background: var(--white); padding: 5rem 2.5rem 2rem; box-shadow: -5px 0 30px rgba(0,0,0,0.12); transition: right 0.4s ease; gap: 0; }
+            .nav-links.open { right: 0; display: flex; }
+            .nav-links a { color: var(--charcoal); padding: 1rem 0; border-bottom: 1px solid var(--ivory-dark); }
+            .menu-toggle { display: flex; }
+            .split-access { grid-template-columns: 1fr; }
+            .split-panel { padding: 4rem 2rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .stat-item { border-bottom: 1px solid rgba(255,255,255,0.06); }
+            .products-grid { grid-template-columns: 1fr; }
+            .awards-grid { grid-template-columns: 1fr; }
+            .hero-buttons { flex-direction: column; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .cert-grid { gap: 1rem; }
+            .cert-item { padding: 1rem 1.5rem; min-width: 100px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-logo">Swiss <span>International</span></div>
+        <div class="loader-bar"></div>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/85226705598" target="_blank" class="wa-float" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+
+    <!-- Header -->
+    <header class="header transparent" id="header">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">Swiss <span>International</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">首頁</a></li>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="products.html">產品介紹</a></li>
+                <li><a href="partnership.html">商業合作</a></li>
+                <li><a href="contact.html">聯絡我們</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="選單">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Cell Control™ 雙核專利技術</div>
+            <h1>源自細胞，<br><em>逆轉時間</em></h1>
+            <p class="hero-sub">
+                二十年深耕香港，結合瑞士細胞科學與東方草本智慧，<br>
+                從肌膚底層激活修復，重生新細胞。
+            </p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-gold">探索產品系列</a>
+                <a href="partnership.html" class="btn btn-outline-white">商業合作洽談</a>
+            </div>
+        </div>
+        <div class="hero-scroll">Scroll</div>
+    </section>
+
+    <!-- Split Access -->
+    <div class="split-access reveal">
+        <div class="split-panel b2c">
+            <div class="split-panel-content">
+                <span class="panel-label">消費者專區 B2C</span>
+                <h3>探索高端抗衰老<br>護膚系列</h3>
+                <p>從潔面、精華到面膜，完整護膚儀式，讓 Cell Control™ 技術從底層修復您的肌膚。</p>
+                <ul class="split-panel-benefits">
+                    <li>多肽膠原修復肌底液 — 旗艦精華</li>
+                    <li>羊胚胎抗敏面膜 — 深層舒緩</li>
+                    <li>氨基酸溫和潔面 — 適合敏感肌</li>
+                    <li>黃金會員 9 折 / 鉑金會員 8 折</li>
+                </ul>
+                <a href="products.html" class="btn btn-gold">查看產品</a>
+            </div>
+        </div>
+        <div class="split-panel b2b">
+            <div class="split-panel-content">
+                <span class="panel-label">商業夥伴專區 B2B</span>
+                <h3 style="color:#fff;">成為我們的<br>全球合作夥伴</h3>
+                <p style="color:rgba(255,255,255,0.7);">20 年品牌底蘊，多國專利技術，共創雙贏。代理商制度、企業採購、OEM/ODM 均歡迎洽談。</p>
+                <ul class="split-panel-benefits">
+                    <li>區域代理商獨家授權</li>
+                    <li>企業採購大批量優惠</li>
+                    <li>OEM / ODM 客製方案</li>
+                    <li>10+ 國際市場已覆蓋</li>
+                </ul>
+                <a href="partnership.html" class="btn btn-outline-gold">立即洽談</a>
+            </div>
+        </div>
+        <div class="split-divider">SI</div>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Years of Expertise</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number">18</div>
+                    <div class="stat-label">Exhibition Years</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Global Markets</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">International Patents</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Preview -->
+    <section class="section products-preview">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Signature Products</span>
+                <h2 class="section-title">明星產品系列</h2>
+                <p class="section-desc">Cell Control™ 雙核專利技術，結合羊胚胎細胞修復與多肽草本，為您呈現最高端的抗衰老護膚體驗</p>
+            </div>
+            <div class="products-grid">
+                <article class="product-card reveal">
+                    <div class="product-card-image">
+                        <img src="images/product-serum.jpg" alt="多肽膠原修復肌底液">
+                    </div>
+                    <div class="product-card-body">
+                        <h4>多肽膠原修復肌底液</h4>
+                        <div class="product-tags">
+                            <span class="product-tag">旗艦精華</span>
+                            <span class="product-tag">淡化皺紋</span>
+                            <span class="product-tag">緊緻輪廓</span>
+                        </div>
+                        <p>專利可溶性膠原配方，每 7 天一次，從底層激活細胞修復，淡化皺紋、緊致輪廓。</p>
+                        <a href="products.html#product1" class="product-link">了解更多</a>
+                    </div>
+                </article>
+                <article class="product-card reveal">
+                    <div class="product-card-image">
+                        <img src="images/product-mask.jpg" alt="羊胚胎細胞修復面膜">
+                    </div>
+                    <div class="product-card-body">
+                        <h4>多肽膠原抗敏面膜</h4>
+                        <div class="product-tags">
+                            <span class="product-tag">舒緩修復</span>
+                            <span class="product-tag">膠原新生</span>
+                            <span class="product-tag">敏感適用</span>
+                        </div>
+                        <p>含寡肽-1 & 寡肽-3，配合積雪草、黃芩草本成分，深層舒緩鎮靜，驅動膠原再生。</p>
+                        <a href="products.html#product2" class="product-link">了解更多</a>
+                    </div>
+                </article>
+                <article class="product-card reveal">
+                    <div class="product-card-image">
+                        <img src="images/product-set.jpg" alt="瑞士抗衰老產品套組">
+                    </div>
+                    <div class="product-card-body">
+                        <h4>羊胎多肽細胞修復組合</h4>
+                        <div class="product-tags">
+                            <span class="product-tag">明星套組</span>
+                            <span class="product-tag">全效修復</span>
+                            <span class="product-tag">28天蛻變</span>
+                        </div>
+                        <p>完整的抗衰老護膚解決方案，結合修復精華與面膜，28 天煥然一新，逆轉肌齡。</p>
+                        <a href="products.html" class="product-link">了解更多</a>
+                    </div>
+                </article>
+            </div>
+            <div class="text-center" style="margin-top:3.5rem;">
+                <a href="https://swissintig.boutir.com/" target="_blank" class="btn btn-gold">
+                    前往網路商店購買
+                </a>
+                &nbsp;&nbsp;
+                <a href="products.html" class="btn btn-outline-gold">查看完整系列</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Section -->
+    <section class="section tech-section section--alt">
+        <div class="container">
+            <div class="tech-layout">
+                <div class="tech-image reveal">
+                    <img src="images/product-poster.jpg" alt="Cell Control 雙核專利技術">
+                    <div class="tech-image-badge">Cell Control™ Patent</div>
+                </div>
+                <div class="reveal">
+                    <span class="section-label">Core Technology</span>
+                    <h2 class="section-title left">Cell Control™<br>雙核專利技術</h2>
+                    <p style="margin-bottom:2.5rem;">結合羊胚胎細胞修復與多肽草本細胞修復，從肌膚底層激活修復重生新細胞。不只處理表面，而是從根源逆轉衰老。</p>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <div class="tech-item-icon">🧬</div>
+                            <div class="tech-item-content">
+                                <h4>羊胚胎細胞修復</h4>
+                                <p>深入肌底，激活受損細胞，促進細胞分裂與再生，重建肌膚活力。</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-item-icon">🌿</div>
+                            <div class="tech-item-content">
+                                <h4>多肽草本細胞修復</h4>
+                                <p>高濃度多肽（≥5%）配合東方植物萃取，透滲技術直達真皮層，激活纖維母細胞。</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-item-icon">✨</div>
+                            <div class="tech-item-content">
+                                <h4>專利可溶性膠原</h4>
+                                <p>強化皮膚屏障，淡化皺紋，提升輪廓，讓肌膚重現年輕彈性與光澤。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top:3rem;">
+                        <a href="about.html" class="btn btn-outline-gold">深入了解技術</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Spotlight -->
+    <section class="founder-section">
+        <div class="container">
+            <div class="founder-layout">
+                <div class="founder-image-wrap reveal">
+                    <div class="founder-image">
+                        <img src="images/brand-exhibition.jpg" alt="廖虹菠女士 Dr. Ninar Liao">
+                    </div>
+                    <div class="founder-image-frame"></div>
+                </div>
+                <div class="founder-content reveal">
+                    <span class="section-label">Founder & CEO</span>
+                    <h2>廖虹菠女士<br>Dr. Ninar Liao</h2>
+                    <p class="founder-title">創辦人 · 主席 · 首席執行官</p>
+                    <p>抗衰老產業先驅者，擁有美國哥倫比亞大學社會學博士學位，以卓越的科研視野帶領瑞士國際抗衰老集團成為行業標杆。</p>
+                    <ul class="founder-honors">
+                        <li><span class="year">2016</span>香港 18 位商業女領袖</li>
+                        <li><span class="year">2017</span>諾貝爾學人獎 — 亞洲傑出女領袖</li>
+                        <li><span class="year">2017</span>兩岸三地十大女領袖</li>
+                        <li><span class="year">2018</span>美國哥倫比亞大學社會學博士</li>
+                        <li><span class="year">2019</span>德國 Wolfhagen 市長特邀訪問</li>
+                    </ul>
+                    <a href="about.html" class="btn btn-outline-white" style="margin-top:1rem;">了解品牌故事</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards -->
+    <section class="section awards-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Awards & Recognition</span>
+                <h2 class="section-title">榮譽與認可</h2>
+            </div>
+            <div class="awards-grid">
+                <div class="award-card reveal">
+                    <div class="award-icon">🏆</div>
+                    <h4>香港著名品牌獎</h4>
+                    <p>2023年榮獲，香港明星、貴族首選的抗衰老護膚品牌。</p>
+                </div>
+                <div class="award-card reveal">
+                    <div class="award-icon">🥇</div>
+                    <h4>矽谷國際發明節金獎</h4>
+                    <p>美國矽谷國際發明節，Cell Control™ 技術獲國際科研最高認可。</p>
+                </div>
+                <div class="award-card reveal">
+                    <div class="award-icon">🌐</div>
+                    <h4>連續 18 年國際參展</h4>
+                    <p>香港亞太區國際美容展，代表品牌深厚的行業影響力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <div class="cert-bar">
+        <div class="container">
+            <div style="text-align:center;margin-bottom:2.5rem;">
+                <span class="section-label" style="color:var(--gold);">International Certifications</span>
+                <h3 style="color:var(--white);font-family:var(--font-display);font-weight:300;font-size:1.6rem;margin-top:0.5rem;">多國專利認證</h3>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <div class="cert-flag">🇬🇧</div>
+                    <div class="cert-label">英國專利</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-flag">🇺🇸</div>
+                    <div class="cert-label">美國專利</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-flag">🇪🇺</div>
+                    <div class="cert-label">歐盟 ANCI</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-flag">🇩🇪</div>
+                    <div class="cert-label">德國專利</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-flag">🇨🇳</div>
+                    <div class="cert-label">CQC 認證</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Media -->
+    <section class="section media-section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom:3rem;">
+                <span class="section-label">Media Coverage</span>
+                <h2 class="section-title">媒體報導</h2>
+            </div>
+            <div class="media-logos">
+                <div class="media-logo">香港經濟日報</div>
+                <div class="media-logo">香港商報</div>
+                <div class="media-logo">香港姊妹美容</div>
+                <div class="media-logo">新城電台</div>
+                <div class="media-logo">德國紐倫堡日報</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <span class="section-label" style="color:var(--gold-light)">Partner with Us</span>
+            <h2>攜手開拓全球抗衰老市場</h2>
+            <p>無論您是尋求代理合作、企業採購或 OEM/ODM 方案，我們樂意為您量身打造最佳合作模式。</p>
+            <div class="cta-buttons">
+                <a href="partnership.html" class="btn btn-gold">商業合作洽談</a>
+                <a href="contact.html" class="btn btn-outline-white">直接聯絡我們</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">Swiss <span>International</span></div>
+                    <p>瑞士國際抗衰老集團成立於 2004 年，深耕高端細胞修復與抗衰老領域二十年，以 Cell Control™ 雙核專利技術為全球客戶帶來科學護膚的全新境界。</p>
+                    <a href="https://swissintig.boutir.com/" target="_blank" class="btn btn-outline-gold" style="font-size:0.8rem;padding:0.7rem 1.5rem;">前往網路商店</a>
+                </div>
+                <div>
+                    <h5>快速連結</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="products.html">產品介紹</a></li>
+                        <li><a href="partnership.html">商業合作</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                        <li><a href="https://swissintig.boutir.com/" target="_blank">網路商店</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h5>聯絡資訊</h5>
+                    <p>📍 香港九龍尖沙咀麼地道 66 號<br>尖沙咀中心 103A 室</p>
+                    <p>📞 <a href="tel:+85226705598">(852) 2670 5598</a></p>
+                    <p>💬 <a href="https://wa.me/85226705598">WhatsApp 即時諮詢</a></p>
+                    <p>🌐 <a href="http://www.swissint.com.hk" target="_blank">www.swissint.com.hk</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 瑞士國際抗衰老（集團）控股有限公司 Swiss International Anti-Aging (Group) Holding Co., Ltd. · All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // ── Loader ──
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const loader = document.getElementById('loader');
+            loader.classList.add('fade');
+        }, 1200);
+    });
+
+    // ── Hero image load ──
+    document.getElementById('hero').classList.add('loaded');
+
+    // ── Transparent / Solid nav on scroll ──
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 80) {
+            header.classList.remove('transparent');
+            header.classList.add('solid');
+        } else {
+            header.classList.remove('solid');
+            header.classList.add('transparent');
+        }
+    });
+
+    // ── Mobile menu ──
+    const toggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    document.addEventListener('click', e => {
+        if (!toggle.contains(e.target) && !navLinks.contains(e.target))
+            navLinks.classList.remove('open');
+    });
+
+    // ── Scroll reveal ──
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                observer.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
