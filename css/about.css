@@ -1,0 +1,406 @@
+/* ========================================
+   關於我們頁面樣式
+======================================== */
+
+/* 頁面標題 */
+.page-header {
+  padding: 10rem 0 6rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  text-align: center;
+  color: var(--color-white);
+}
+
+.page-header h1 {
+  color: var(--color-white);
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* 品牌故事 */
+.brand-story {
+  background: var(--color-background);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.story-image {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: var(--color-white);
+}
+
+.image-placeholder svg {
+  width: 100%;
+  height: 100%;
+}
+
+.story-content h2 {
+  margin-bottom: 2rem;
+  color: var(--color-secondary);
+}
+
+.story-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.9;
+}
+
+.story-content strong {
+  color: var(--color-primary);
+}
+
+/* 時間軸 */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.timeline-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--color-white);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.timeline-item:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-5px);
+}
+
+.year {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-primary);
+}
+
+.event {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+}
+
+/* 創辦人 */
+.founder-card {
+  padding: 3rem;
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.founder-image {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.founder-info h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+}
+
+.founder-title {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.founder-bio {
+  margin-bottom: 2rem;
+}
+
+.founder-bio p {
+  line-height: 1.9;
+}
+
+.honors-list h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-secondary);
+}
+
+.honors-list ul {
+  list-style: none;
+}
+
+.honors-list li {
+  padding: 0.8rem 0;
+  color: var(--color-text-light);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.honors-list li:last-child {
+  border-bottom: none;
+}
+
+/* 核心技術 */
+.core-technology {
+  background: var(--color-background);
+}
+
+.tech-details {
+  display: grid;
+  gap: 3rem;
+}
+
+.tech-item {
+  padding: 3rem;
+}
+
+.tech-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tech-icon-large {
+  font-size: 5rem;
+  flex-shrink: 0;
+}
+
+.tech-header h3 {
+  font-size: 1.8rem;
+  color: var(--color-secondary);
+}
+
+.tech-description p {
+  margin-bottom: 1.5rem;
+  line-height: 1.9;
+}
+
+.tech-description strong {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.feature-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.feature-list li {
+  padding: 0.8rem 1.2rem;
+  background: var(--color-background);
+  border-radius: 8px;
+  color: var(--color-text-light);
+}
+
+/* 榮譽認證 */
+.cert-category {
+  margin-bottom: 4rem;
+}
+
+.cert-category:last-child {
+  margin-bottom: 0;
+}
+
+.cert-category > h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+.cert-card {
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.cert-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.cert-card h4 {
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+}
+
+.cert-card p {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+.cert-badge {
+  text-align: center;
+  padding: 2rem;
+  background: var(--color-background);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.cert-badge:hover {
+  background: var(--color-white);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.badge-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.badge-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-primary);
+}
+
+.cert-badge p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.media-coverage-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.media-tag {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--color-background);
+  border-radius: 50px;
+  color: var(--color-text-dark);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.media-tag:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* 全球佈局 */
+.global-presence {
+  background: var(--color-background);
+}
+
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.region-card {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.region-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-secondary);
+}
+
+.region-card p {
+  line-height: 2;
+  color: var(--color-text-light);
+}
+
+/* 響應式 - 平板 */
+@media (max-width: 1024px) {
+  .page-header {
+    padding: 8rem 0 5rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2.8rem;
+  }
+  
+  .story-grid,
+  .founder-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .regions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 響應式 - 手機 */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 7rem 0 4rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .page-header p {
+    font-size: 1.1rem;
+  }
+  
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+  
+  .founder-card {
+    padding: 2rem;
+  }
+  
+  .tech-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .tech-item {
+    padding: 2rem;
+  }
+  
+  .cert-category > h3 {
+    font-size: 1.5rem;
+  }
+  
+  .media-tag {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
